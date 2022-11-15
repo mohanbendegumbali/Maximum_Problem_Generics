@@ -7,24 +7,24 @@ namespace TestProject1
         FindMaxNum maxString = new FindMaxNum();
         [SetUp]
 
-        public void GivenMaxFirstNum_WhenAnalysed_ShouldReturnFirstMax()
+        public void GivenMaxFirstString_WhenAnalysed_ShouldReturnFirstMax()
         {
-            float result = maxString.FindMaxFloat(5.7F, 5.6F, 5.5F);
-            Assert.AreEqual(5.7F, result);
+            string result = maxString.FindMaxString("Peach","Apple","Banana");
+            Assert.AreEqual("Peach", result);
         }
 
         [Test]
-        public void GivenMaxsecondNum_WhenAnalysed_ShouldReturnSecondMax()
+        public void GivenMaxsecondString_WhenAnalysed_ShouldReturnSecondMax()
         {
-            float result = maxString.FindMaxFloat(5.5F, 5.7F, 5.6F);
-            Assert.AreEqual(5.7F, result);
+            string result = maxString.FindMaxString("Apple","Peach","Banana");
+            Assert.AreEqual("Peach", result);
         }
 
         [Test]
-        public void GivenMaxThirdNum_WhenAnalysed_ShouldReturnThirdMax()
+        public void GivenMaxThirdString_WhenAnalysed_ShouldReturnThirdMax()
         {
-            float result = maxString.FindMaxFloat(5.6F, 5.5F, 5.7F);
-            Assert.AreEqual(5.7F, result);
+            string result = maxString.FindMaxString("Apple","Banana","Peach");
+            Assert.AreEqual("Peach", result);
         }
     }
 }
