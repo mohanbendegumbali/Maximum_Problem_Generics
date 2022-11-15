@@ -9,22 +9,22 @@ namespace TestProject1
 
         public void GivenMaxFirstNum_WhenAnalysed_ShouldReturnFirstMax()
         {
-            int result = maxString.FindMaxInteger(15, 5, 10);
-            Assert.AreEqual(15, result);
+            float result = maxString.FindMaxFloat(5.7F, 5.6F, 5.5F);
+            Assert.AreEqual(5.7F, result);
         }
 
         [Test]
         public void GivenMaxsecondNum_WhenAnalysed_ShouldReturnSecondMax()
         {
-            int result = maxString.FindMaxInteger(10, 15, 5);
-            Assert.AreEqual(15, result);
+            float result = maxString.FindMaxFloat(5.5F, 5.7F, 5.6F);
+            Assert.AreEqual(5.7F, result);
         }
 
         [Test]
         public void GivenMaxThirdNum_WhenAnalysed_ShouldReturnThirdMax()
         {
-            int result = maxString.FindMaxInteger(10, 5, 15);
-            Assert.AreEqual(15, result);
+            float result = maxString.FindMaxFloat(5.6F, 5.5F, 5.7F);
+            Assert.AreEqual(5.7F, result);
         }
     }
 }
